@@ -1,0 +1,82 @@
+Aula sobre Funções em Python
+O que é uma Função?
+Uma função em Python é um bloco de código que realiza uma tarefa específica e 
+pode ser reutilizado. Funções ajudam a tornar o código mais organizado e modular.
+
+Estrutura Básica de uma Função
+Para definir uma função em Python, usamos a palavra-chave def, 
+seguida pelo nome da função e parênteses. Aqui está um exemplo básico:
+
+
+def saudacao():
+    print("Olá, mundo!")
+Chamando uma Função
+Para executar a função definida acima, basta chamar seu nome seguido de parênteses:
+
+
+saudacao()  # Isso imprimirá "Olá, mundo!"
+
+Parâmetros e Argumentos
+Funções podem receber parâmetros para torná-las mais flexíveis. 
+Aqui está um exemplo:
+
+
+def saudacao(nome):
+    print(f"Olá, {nome}!")
+
+Quando chamamos essa função, passamos um argumento:
+
+saudacao("Alice")  # Isso imprimirá "Olá, Alice!"
+Retornando Valores
+Funções podem retornar valores usando a palavra-chave return:
+
+
+def soma(a, b):
+    return a + b
+
+resultado = soma(3, 5)  # resultado será 8
+print(resultado)  # Isso imprimirá 8
+
+Funções com Múltiplos Parâmetros
+Funções podem ter múltiplos parâmetros:
+
+
+def subtracao(a, b):
+    return a - b
+
+resultado = subtracao(10, 5)  # resultado será 5
+print(resultado)  # Isso imprimirá 5
+
+Parâmetros Opcionais
+Você pode definir parâmetros opcionais com valores padrão:
+
+
+def saudacao(nome="Mundo"):
+    print(f"Olá, {nome}!")
+
+saudacao()  # Isso imprimirá "Olá, Mundo!"
+saudacao("Alice")  # Isso imprimirá "Olá, Alice!"
+
+Funções Aninhadas
+Funções podem ser definidas dentro de outras funções:
+
+
+def funcao_externa():
+    def funcao_interna():
+        print("Dentro da função interna")
+    funcao_interna()
+    print("Dentro da função externa")
+
+funcao_externa()
+
+Exemplos Práticos
+Vamos ver alguns exemplos práticos de funções:
+
+Função para Verificar se um Número é Par
+
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+print(eh_par(4))  # True
+print(eh_par(7))  # False

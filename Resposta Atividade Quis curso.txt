@@ -1,0 +1,78 @@
+perguntas = {
+    'Pergunta 1': {
+        'pergunta': 'Qual a melhor Linguagem?',
+        'respostas': {'a': 'Java', 'b': 'Python', 'c': 'Angular'},
+        'resposta_certa': 'b',
+    },
+    'Pergunta 2': {
+        'pergunta': 'Qual o Professor mais legal?',
+        'respostas': {'a': 'Joao', 'b': 'Pedro', 'c': 'Maria'},
+        'resposta_certa': 'a',
+    },
+    'Pergunta 3': {
+        'pergunta': 'Qual é a capital da França?',
+        'respostas': {'a': 'Berlim', 'b': 'Madri', 'c': 'Paris'},
+        'resposta_certa': 'c',
+    },
+    'Pergunta 4': {
+        'pergunta': 'Qual o maior planeta do sistema solar?',
+        'respostas': {'a': 'Terra', 'b': 'Júpiter', 'c': 'Marte'},
+        'resposta_certa': 'b',
+    },
+    'Pergunta 5': {
+        'pergunta': 'Quantos continentes existem?',
+        'respostas': {'a': '5', 'b': '6', 'c': '7'},
+        'resposta_certa': 'c',
+    },
+    'Pergunta 6': {
+        'pergunta': 'Qual é a moeda do Japão?',
+        'respostas': {'a': 'Dólar', 'b': 'Iene', 'c': 'Euro'},
+        'resposta_certa': 'b',
+    },
+    'Pergunta 7': {
+        'pergunta': 'Quem escreveu "Dom Casmurro"?',
+        'respostas': {'a': 'Machado de Assis', 'b': 'José de Alencar', 'c': 'Joaquim Manuel'},
+        'resposta_certa': 'a',
+    },
+    'Pergunta 8': {
+        'pergunta': 'Qual é o triângulo mais famoso da Grécia?',
+        'respostas': {'a': 'Triângulo de Pitágoras', 'b': 'Triângulo de Atenas', 'c': 'Triângulo de Delfos'},
+        'resposta_certa': 'a',
+    },
+    'Pergunta 9': {
+        'pergunta': 'Quem foi o primeiro homem a pisar na Lua?',
+        'respostas': {'a': 'Yuri Gagarin', 'b': 'Neil Armstrong', 'c': 'Buzz Aldrin'},
+        'resposta_certa': 'b',
+    },
+    'Pergunta 10': {
+        'pergunta': 'Qual é a fórmula da água?',
+        'respostas': {'a': 'CO2', 'b': 'H2O', 'c': 'NaCl'},
+        'resposta_certa': 'b',
+    },
+}
+
+def realizar_atividade():
+    acertos = 0  # Contador de acertos
+
+    print()
+    for indice_p, txtpergunta in perguntas.items():
+        print(f'{indice_p}: {txtpergunta["pergunta"]}')
+
+        print('Respostas: ')
+        for indice_r, valor_r in txtpergunta['respostas'].items():
+            print(f'[{indice_r}]: {valor_r}')
+
+        # Verificando as respostas do usuário
+        resposta_usuario = input('Escolha a opção: ').strip()
+
+        if resposta_usuario == txtpergunta['resposta_certa']:
+            print('Acertou!\n')
+            acertos += 1
+        else:
+            print(f'Errou! A resposta certa era: {txtpergunta["resposta_certa"]}\n')
+
+    # Resultado final
+    print(f'Você acertou {acertos} de {len(perguntas)} perguntas.')
+
+if __name__ == "__main__":
+    realizar_atividade()

@@ -1,0 +1,95 @@
+Calculando o imc simples no Python, if, concatenação
+
+Aula Anterior
+https://youtu.be/fXMmJ6kreSI
+
+
+
+Codigo da Aula
+
+print('Joao', type('Joao'))
+print(10, type(10))
+print(325.80, type(325.80))
+
+
+print(10 == 10, type(10 == 10))
+print('J' == 'J', type('J' == 'J'))
+print('J' == 'j', type('J' == 'j'))
+print('10', type('10'), type(int('10')))
+
+
+
+
+
+print('soma  + ', 10+2)
+print('subtracao - ', 10-2)
+print('multiplicacao  * ', 10*2)
+print('divisao / ', 10/2)
+print('Forcando divisao com inteiros // ', 10.80 // 2)
+print('Potenciacao ** ', 2 ** 10)
+print('Mod % resto da divisao  ', 10 % 2)
+
+nome = 'Joao'
+numero = 30
+salario = 2350.50
+idade = 18
+res_bol = idade >= 18
+data_ano = 2021
+
+print('Nome:', nome)
+print('Numero:', numero)
+print('Salario:', salario)
+print('Resultado booleano:', res_bol)
+print('Estamos no ano de :', data_ano)
+
+# Calculando o imc simples
+
+peso = 65
+altura = 1.70
+# regra imc e peso dividiso por altura ao quadrado
+
+imc = peso/(altura ** 2)
+print('IMC', imc)
+
+# formanto casas decimais com F-Strings
+print(f'IMC, {imc: ,.2f}')
+
+nome = input("Digite um nome")
+print(f' O nome digitado foi: Ana{nome}')
+
+nome = input("Digite um nome")
+idade = input("Digite a idade")
+ano_nasc = 2021-int(idade)
+
+print(f'{nome} tem {idade} anos '
+      f'{nome} nasceu em {ano_nasc}')
+
+num1 = input("Digite um numero")
+num2 = input("Digite outro numero")
+print(num1+num2)
+
+# Correção
+
+num1 = int(input("Digite um numero"))
+num2 = int(input("Digite outro numero"))
+print(num1+num2)
+
+
+nome = (input("Digite o nome"))
+idade = int(input("Digite a idade"))
+if idade >= 18:
+    print(f'{nome} maior de idade com {idade} anos')
+else:
+    print(f'{nome} menor de idade com {idade} anos')
+"""
+usuario = input('Usuario:')
+senha = input('Senha')
+# atribuido valores
+
+user_sis = 'Pebinha'
+pass_sis = 'menor'
+
+if usuario == user_sis and senha == pass_sis:
+    print('usuario logado no Sistema')
+else:
+    print('acesso negado ao Sistema')

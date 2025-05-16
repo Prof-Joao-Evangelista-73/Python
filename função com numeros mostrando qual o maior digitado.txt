@@ -1,0 +1,20 @@
+def encontrar_maior(nums):
+    if not nums:
+        return None
+    maior = nums[0]
+    for num in nums:
+        if num > maior:
+            maior = num
+    return maior
+
+# Criação da lista de números com inputs do usuário
+numeros = []
+for i in range(3):  # Vamos assumir que queremos 3 números para simplificar o exemplo
+    num = int(input("Digite um número inteiro: "))
+    numeros.append(num)
+
+# Chamada da função para encontrar o maior número
+maior_numero = encontrar_maior(numeros)
+
+print("Os números digitados foram:", numeros)
+print("O maior número digitado é:", maior_numero)
